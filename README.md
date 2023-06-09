@@ -8,4 +8,4 @@
 
 ## Modules
 
-- `getVanillaVersions' *获取服务端信息列表(最低至1.8)*
+- `getVanillaVersions` *获取服务端信息列表(最低至1.8)*

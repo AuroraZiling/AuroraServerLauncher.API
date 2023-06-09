@@ -10,7 +10,7 @@ input("Press Enter to start...")
 
 jsonModel = {
     "latest": "",
-    "versions": {}
+    "versions": []
 }
 
 versionList = []
@@ -34,7 +34,7 @@ while True:
         downloadUrl = specificVerAnalysis.xpath("/html/body/main/div/div[1]/div[2]/div[1]/a/@href")[0]
         print(f"Version: {version} | Release Time: {release_time[0]} | Wiki URL: {wikiUrl} | Download URL: {downloadUrl}")
 
-        jsonModel["versions"][version] = {"id": version, "releaseTime": release_time[0], "changeLog": wikiUrl, "url": downloadUrl}
+        jsonModel["versions"].append({"id": version, "releaseTime": release_time[0], "changeLog": wikiUrl, "url": downloadUrl})
         versionList.append(version)
         if version == "1.8":
             break
